@@ -15,7 +15,7 @@ class NotesWall{
     constructor(){
         this.id = 0;
         this.wall = document.getElementById("notes-wall");
-        this.noteTemplate = node.clone(this.wall.children[0]);
+        this.noteTemplate = this.wall.children[0].cloneNode(true);
         this.delete = this.delete.bind(this);
         this.edit = this.edit.bind(this);
         this.saveEdit = this.saveEdit.bind(this);
