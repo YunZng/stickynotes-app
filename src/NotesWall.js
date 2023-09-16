@@ -3,11 +3,12 @@ import Note from "./Note.js";
 export default class NotesWall{
     constructor(){
         this.wall = document.getElementById("notes-wall");
+        this.template = document.getElementById("notes-wall").children[0];
     }
 
     // function to add a new note to the wall
     add = (text) => {
-        this.wall.appendChild(new Note(text).note);
+        this.wall.appendChild(new Note(text, this.template).note);
         this.updateListener();
     }
 
