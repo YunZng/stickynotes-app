@@ -1,6 +1,6 @@
-import NotesWall from "./NotesWall.js"
+import NotesWall from "./NotesWall.js";
 
-export default class StickyNotesApp{
+class StickyNotesApp{
     constructor(){
         this.wall = new NotesWall();
     }
@@ -20,3 +20,5 @@ export default class StickyNotesApp{
         document.getElementById("new-note").onkeydown = this.addNote;
     }
 }
+
+export default StickyNotesApp;

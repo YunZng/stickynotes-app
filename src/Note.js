@@ -1,5 +1,4 @@
-
-export default class Note{
+class Note{
     // takes built-in note as input and create a copy of it.
     static id = 0;
     constructor(text, node){
@@ -14,3 +13,5 @@ export default class Note{
         this.note.children[2].innerHTML = text;
     }
 }
+
+export default Note;

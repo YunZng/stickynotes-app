@@ -1,6 +1,6 @@
 import Note from "./Note.js";
 
-export default class NotesWall{
+class NotesWall{
     constructor(){
         this.wall = document.getElementById("notes-wall");
         this.template = document.getElementById("notes-wall").children[0];
@@ -45,3 +45,4 @@ export default class NotesWall{
         }
     }
 }
+export default NotesWall;
