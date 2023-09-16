@@ -2,8 +2,13 @@ class Note{
     // takes built-in note as input and create a copy of it.
     static id = 0;
     constructor(text, node){
-        this.id = Note.id++;
+        this.text = text;
+        this.id = "note"+Note.id++;
         this.note = node.cloneNode(true);
+        this.note.id = this.id;
+        for(let child of this.note.children){
+            child.id = this.id;
+        }
         this.setText(text);
     }
     setText(text){
