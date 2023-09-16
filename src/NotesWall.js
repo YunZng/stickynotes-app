@@ -38,7 +38,10 @@ export default class NotesWall{
         if(e.key == "Enter" && !e.shiftKey || !e.target.hasFocus && !e.key){
             e.preventDefault();
             e.target.classList.add("hidden");
-            e.target.parentNode.children[1].innerHTML = e.target.value.replaceAll("\n", "<br>");
+            let text = e.target.value;
+            e.target.parentNode.children[1].innerHTML = text.replaceAll("\n", "<br>");
+            e.target.parentNode.children[2].innerHTML = text;
+            e.target.parentNode.children[2].value = text;
         }
     }
 }

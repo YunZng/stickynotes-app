@@ -11,5 +11,6 @@ export default class Note{
         this.text = text;
         this.note.children[1].innerHTML = text.replaceAll("\n", "<br>");
         this.note.children[2].value = text;
+        this.note.children[2].innerHTML = text;
     }
 }
